@@ -11,13 +11,13 @@ lam = np.divide(tip, root)
 alt = float(input("Enter Altitude: "))
 temp = 59.0 - np.multiply(0.00356, alt)
 T = temp + 460
-print(temp)
+print("Temperature is ", temp)
 from Pressure import pressure
 P = abs(pressure(temp))
-print(P)
+print("Pressure is ", P)
 GRT = T*1.40*1716.59
 a = np.sqrt(GRT)
-print(a)
+print("Speed of sound is ", a)
 tr = np.divide(thicc, root)
 tc = np.power(tr, 3)
 AR1 = AR + 2.000
@@ -29,4 +29,4 @@ num = G
 frac = np.divide(num,den)
 fraction = np.sqrt(frac)
 v = np.multiply(a, fraction)
-print(v)
+print("Max fin flutter velocity", v)
